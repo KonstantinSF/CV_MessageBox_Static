@@ -43,5 +43,13 @@ namespace CV_MessageBox
                 MessageBox.Show(CVpart2,"CV_Firulev_KS part 2", MessageBoxButtons.OK, MessageBoxIcon.Information); 
                 MessageBox.Show(CVpart3,$"CV_Firulev_KS part 3. Average num of symbols is {Average}", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
+
+        private void checkBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            int X = this.Size.Width; 
+            int Y = this.Size.Height;
+            checkBox1.Location= new Point (new Random().Next(5,X-50),new Random().Next(5,Y-70)); 
+            //MessageBox.Show($"{e.Location.X} {e.Location.Y}"); 
+        }
     }
 }
